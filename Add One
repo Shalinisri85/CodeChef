@@ -1,0 +1,18 @@
+import java.util.*;
+import java.math.BigInteger;
+
+class Codechef {
+    public static void main(String[] args) throws java.lang.Exception {
+        Scanner scanner = new Scanner(System.in);
+        int x = scanner.nextInt();
+        scanner.nextLine(); 
+        while (x-- > 0) {
+            String str = scanner.nextLine();
+            BigInteger number = new BigInteger(str);
+            System.out.println(number.add(BigInteger.ONE));
+            
+        }
+    }
+
+   
+}
