@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+        while (t-- > 0) {
+            int n = scanner.nextInt();
+            int[] size = new int[n];
+            for (int i = 0; i < n; i++) {
+                size[i] = scanner.nextInt();
+            }
+           String s=scanner.next();
+		    int k=101;
+		    for (int i=0; i<n; i++){
+		        if(s.charAt(i)=='0' && size[i]<k){
+		            k=size[i];
+		        }
+		    } 
+		    System.out.println(k);
+        }
+    }
+}
