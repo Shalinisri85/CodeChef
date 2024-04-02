@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+
+        while (t-- > 0) {
+            int n = scanner.nextInt();
+            int[] d = new int[n];
+            int maximum=Integer.MIN_VALUE;
+            int index=0;
+            for (int i = 0; i < n; i++) {
+                d[i] = scanner.nextInt();
+                
+                if(d[i]>=maximum){
+                    maximum=d[i];
+                    index=i;
+                }
+            }
+            System.out.println(index==n-1?"Yes":"No");
+            // Your code goes here
+        }
+    }
+}
