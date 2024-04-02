@@ -1,0 +1,32 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner scanner=new Scanner(System.in);
+		int n=scanner.nextInt();
+		 scanner.nextLine();
+		while(n-->0){
+		    String[] str=scanner.nextLine().split(" ");
+		    for(String result:str){
+		      StringBuilder modifiedString =new StringBuilder();
+		      if(result.matches("[A-Za-z]+")&&!result.matches("[A-Z]+")&&result.length()>1){
+		       
+  		        
+  		        System.out.print(modifiedString.append(Character.toUpperCase(result.charAt(0)))
+  		        .append(result.substring(1).toLowerCase()).append(" "));
+  		      }
+  		      else if(result.length()==1){
+		        System.out.print(Character.toUpperCase(result.charAt(0))+" ");
+		        }
+  		      else  {System.out.print(result+" ");}
+		    }
+		    
+		    System.out.println();
+		}
+
+	}
+}
