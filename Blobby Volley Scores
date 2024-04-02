@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+        while (t-- > 0) {
+            int n = scanner.nextInt();
+            String s = scanner.next();
+            boolean alice=true;
+            boolean bob=false;
+            int aliceScore=0;
+            int bobScore=0;
+            for(int i=0;i<s.length();i++){
+                char letter=s.charAt(i);
+                if(letter=='A'){
+                  if(alice==true){
+                    bob=false;
+                    aliceScore++;   
+                  }
+                    else{
+                      bob=false;
+                      alice=true;
+                    }
+                    
+                }
+                else if(letter=='B'){
+                  if(bob==true){
+                    alice=false;
+                    bobScore++;
+                  }
+                  else{
+                    alice=false;
+                    bob=true;
+                  }
+                }
+                
+            }
+            System.out.println(aliceScore+" "+bobScore);
+        }
+    }
+}
