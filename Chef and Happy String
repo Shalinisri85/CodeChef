@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number = scanner.nextInt();
+        scanner.nextLine(); // Consume newline character
+
+        while (number-- > 0) {
+            String str = scanner.nextLine().toLowerCase();
+            
+            if (containsVowel(str)) {
+                System.out.println("Happy");
+            } else {
+                System.out.println("Sad");
+            }
+        }
+    }
+
+    public static boolean containsVowel(String str) {
+        for (int i = 0; i < str.length() - 2; i++) {
+            char ch1 = str.charAt(i);
+            char ch2 = str.charAt(i + 1);
+            char ch3=str.charAt(i+2);
+            if ((ch1 == 'a' || ch1 == 'e' || ch1 == 'i' || ch1 == 'o' || ch1 == 'u') &&
+                (ch2 == 'a' || ch2 == 'e' || ch2 == 'i' || ch2 == 'o' || ch2 == 'u')
+                &&(ch3 == 'a' || ch3 == 'e' || ch3 == 'i' || ch3 == 'o' || ch3 == 'u')) {
+                return true;
+            }
+        }
+        return false;
+    }
+}
