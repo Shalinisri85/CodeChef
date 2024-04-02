@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int t = scanner.nextInt();
+
+        while (t-- > 0) {
+            int n = scanner.nextInt();
+            String s = scanner.next();
+            for(int i=0;i<n;i+=2){
+                char c1=s.charAt(i);
+                char c2=s.charAt(i+1);
+                if(c1=='0'&& c2=='0')System.out.print('A');
+                else if(c1=='0'&& c2=='1')System.out.print('T');
+                else if(c1=='1'&& c2=='0')System.out.print('C');
+                else System.out.print('G');
+            }
+            System.out.println();
+            // Your code goes here
+        }
+    }
+}
