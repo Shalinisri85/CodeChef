@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner scanner=new Scanner(System.in);
+		int size=scanner.nextInt();
+		int ElementToBeSearched=scanner.nextInt();
+		scanner.nextLine();
+		while(size-->0){
+		    int element=scanner.nextInt();
+		    if(element==ElementToBeSearched){
+		        System.out.println("YES");
+		        return;
+		    }
+		    else{
+		        continue;
+		    }
+		}
+        System.out.println("NO");
+	}
+}
